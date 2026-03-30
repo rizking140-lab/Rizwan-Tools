@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rizwan Tools</title>
+    <title>Rizwan Tools - Image to PDF</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         body { background: #f4f7f6; font-family: sans-serif; text-align: center; padding: 10px; margin:0; }
@@ -10,13 +10,13 @@
         .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 350px; margin: auto; border-top: 6px solid #1a3a5a; }
         .up { border: 2px dashed #3498db; padding: 20px; border-radius: 10px; cursor: pointer; display: block; margin-bottom: 10px; font-weight: bold; color: #1a3a5a; }
         .btn { background: #1a3a5a; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; }
-        .ad { margin: 15px 0; min-height: 50px; }
+        .ad-container { margin: 20px 0; min-height: 100px; }
     </style>
 </head>
 <body>
-    <div class="ad">
-        <script type="text/javascript">atOptions={'key':'05db9367aab6dac7ee46d67438dce330','format':'iframe','height':50,'width':320,'params':{}};</script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/05db9367aab6dac7ee46d67438dce330/invoke.js"></script>
+    <div class="ad-container">
+        <script async="async" data-cfasync="false" src="https://pl29014759.profitablecpmratenetwork.com/45ff8db503dafbc66c4512db57e6fe88/invoke.js"></script>
+        <div id="container-45ff8db503dafbc66c4512db57e6fe88"></div>
     </div>
     <div class="logo"><h1>RIZWAN TOOLS</h1></div>
     <div class="card">
@@ -24,14 +24,10 @@
         <label class="up" onclick="document.getElementById('i').click()">📂 Select Images</label>
         <input type="file" id="i" accept="image/*" multiple style="display:none" onchange="document.getElementById('s').innerText=this.files.length+' Images Ready'">
         <div id="s" style="margin-bottom:10px; color:green; font-weight:bold;"></div>
-        <button class="btn" onclick="g()">Convert & Download</button>
-    </div>
-    <div class="ad">
-        <script type="text/javascript">atOptions={'key':'05db9367aab6dac7ee46d67438dce330','format':'iframe','height':50,'width':320,'params':{}};</script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/05db9367aab6dac7ee46d67438dce330/invoke.js"></script>
+        <button class="btn" onclick="gen()">Convert & Download</button>
     </div>
     <script>
-        async function g(){
+        async function gen(){
             const {jsPDF}=window.jspdf; const f=document.getElementById('i').files; if(!f.length) return alert("Select images!");
             const doc=new jsPDF(); const w=doc.internal.pageSize.getWidth(); const h=doc.internal.pageSize.getHeight();
             for(let i=0; i<f.length; i++){
@@ -39,8 +35,7 @@
                 const img=new Image(); img.src=d;
                 await new Promise(r=>{ img.onload=()=>{
                     const ra=img.width/img.height; let iw=w-20, ih=iw/ra; if(ih>h-20){ih=h-20; iw=ih*ra;}
-                    if(i>0) doc.addPage(); 
-                    doc.addImage(d,'JPEG',(w-iw)/2,(h-ih)/2,iw,ih); r();
+                    if(i>0) doc.addPage(); doc.addImage(d,'JPEG',(w-iw)/2,(h-ih)/2,iw,ih); r();
                 };});
             }
             doc.save("Rizwan_Tools.pdf");
